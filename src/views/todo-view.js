@@ -29,6 +29,10 @@ class TodoView extends LitElement {
     }
 
 
+    updateTodoStatus(updatedTodo, complete){
+      this.todos = this.todos.map(todo => updatedTodo === todo ? {...updatedTodo, complete}: todo);
+    }
+
   updateTask(e) {
      this.task = e.target.value;
   }
